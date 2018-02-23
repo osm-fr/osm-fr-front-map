@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Leaflet Provider Demo</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css"/>
+
+        <style>
+            html {
+                height: 100%;
+                -moz-box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+                vertical-align: baseline;
+            }
+            body {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            .map {
+                height: 100%;
+            }
+        </style>
+        <link rel="stylesheet" href="assets/control.layers.minimap.css">
+    </head>
+    <body>
+        <div id="map" class="map"></div>
+
+        <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+        <script src="assets/leaflet-providers.js"></script>
+
+        <script src="assets/L.Control.Layers.Minimap.js"></script>
+
+        <script src="assets/shared.js"></script>
+        <script src="assets/preview.js"></script>
+    </body>
+</html>
