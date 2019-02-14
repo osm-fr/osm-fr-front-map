@@ -1,10 +1,6 @@
 .leaflet-container .leaflet-control-attribution {
     background: rgba(255, 255, 255, 0.85);
 }
-.leaflet-control-container {
-    height: 100%;
-    width: 100%;
-}
 .leaflet-control-container .leaflet-top.leaflet-left {
     height: 100%;
     width: 100%;
