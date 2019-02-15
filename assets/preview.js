@@ -3,7 +3,10 @@
 
 	var map = L.map('map', {
 		zoomControl: false,
+		attributionControl: false,
 	}).setView([48, -3], 5);
+
+	L.control.attribution({prefix: ''}).addTo(map);
 
 	function escapeHtml (string) {
 		return string
