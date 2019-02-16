@@ -1,0 +1,40 @@
+.leaflet-container .leaflet-control-attribution {
+    background: rgba(255, 255, 255, 0.85);
+}
+.leaflet-control-container .leaflet-top.leaflet-left {
+    height: 100%;
+    width: 100%;
+}
+.leaflet-control-layers-expanded.leaflet-control-layers-minimap {
+    width: 30%;
+    min-width: 180px;
+    max-width: 440px;
+    min-height: 180px;
+    max-height: 100%;
+}
+@media only screen and (max-width: 556px) {
+  /* For small screens: */
+  .leaflet-control-layers-expanded.leaflet-control-layers-minimap {
+    width: 50%;
+    height: 40%;
+  }
+}
+@media only screen and (max-width: 556px) and (max-height: 400px),
+ only screen and (max-width: 400px) {
+  /* For small screens: */
+  .leaflet-control-layers-expanded.leaflet-control-layers-minimap {
+    width: 40%;
+    height: 40%;
+  }
+}
+@media only screen and (max-width: 230px),
+ only screen and (max-width: 260px) and (max-height: 600px),
+ only screen and (max-width: 300px) and (max-height: 500px),
+ only screen and (max-width: 350px) and (max-height: 400px),
+ only screen and (max-width: 400px) and (max-height: 300px),
+ only screen and (max-height: 200px) {
+  /* For very small screens: */
+  .leaflet-control-layers-expanded.leaflet-control-layers-minimap {
+    display: none;
+  }
+}
