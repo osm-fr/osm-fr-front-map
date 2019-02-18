@@ -117,20 +117,27 @@
 	var cartodbLink = 'href="https://carto.com/legal/" title="Carto" target="_blank"'
 	
 	var copyrightOSM = 
-		' <nobr><a ' + copyLink + '>' + iconCopyright + 
-		'<b>les contributeurs OpenStreetMap</b></a></nobr> '
+		' <nobr><a ' + copyLink + '>' + iconCopyright + '<b>' + 
+		'<p class="long">les contributeurs & contributrices</p>' +
+		'<p class="med">les contributeurs</p>' +
+		'<p class="short">contributeurs</p>' +
+		' OpenStreetMap</b></a></nobr> '
 	var data = function (link, attribution) {
 		return ' <nobr><a ' + link + '>' + iconPackage + '</a>' +
-			'<b>données</b> ' + attribution + '</nobr> ';
+			'<p class="long"><b>données</b> par </p>' +
+			'<p class="med"><b>données</b> </p>' +
+			attribution + '</nobr> ';
 	};
 	var tiles = function (link, name) {
 		return ' <nobr><a ' + link + '>' + iconMap + '</a>' + 
-			'<b>fond de carte</b> ' + 
+			'<p class="long"><b>fond de carte</b> par </p>' +
+			'<p class="med"><b>fond de carte</b> </p>' + 
 			'<a ' + link + '><b>' + name + '</b></a></nobr> ';
 	};
 	var hosting = function (link, name) {
 		return ' <nobr><a ' + link + '>' + iconHouse + '</a>' + 
-			'hébergé ' +
+			'<p class="long">hébergé par </p>' +
+			'<p class="med">hébergé </p>' +
 			'<a ' + link + '><b>' + name + '</b></a></nobr> ';
 	};
 	var license = function (link, under, type, name) {
@@ -138,35 +145,85 @@
 			under + '<a ' + link + '>' + type + name + '</a></nobr> ';
 	};
 
-	var licenceLibre = ' licence libre '
-	var licencePublic = ' licence domaine public '
-	var nonCommercial = ' usage non-commercial '
-	var under = ' sous '
+	var licenceLibre = 
+		'<p class="long">licence libre </p>' +
+		'<p class="med">licence </p>'
+	var licencePublic = 
+		'<p class="long">licence domaine public </p>' +
+		'<p class="med">licence </p>'
+	var nonCommercial = 
+		'<p class="long">libre pour un usage non-commercial</p>' +
+		'<p class="med">usage non-commercial</p>' +
+		'<p class="short">non-commercial</p>'
+	var under = 
+		'<p class="long"> sous </p>' +
+		'<p class="med"> sous </p>'
 	var odbl = license(odblLink, under, licenceLibre, 'ODbL')
 	var ccbysa2 = license(ccbysa2Link, under, licenceLibre, 'CC BY-SA')
 	var ccby3 = license(ccby3Link, under, licenceLibre, 'CC BY')
 	var ccby4 = license(ccby4Link, under, licenceLibre, 'CC BY')
 	var cc0 = license(cc0Link, under, licencePublic, 'CC0')
 	
-	var osmfrTiles = 'OpenStreetMap France'
-	var osmfrHosting = 'OSM France'
-	var osmbzh = 'OpenStreetMap e brezhoneg'
+	var osmfrTiles =
+		'<p class="long">OpenStreetMap France</p>' +
+		'<p class="med">OSM France</p>' +
+		'<p class="short">OSM France</p>' +
+		'<p class="mini">OSM-FR</p>'
+	var osmfrHosting =
+		'<p class="long">OSM France</p>' +
+		'<p class="med">OSM France</p>' +
+		'<p class="short">OSM-FR</p>' +
+		'<p class="mini">OSM-FR</p>'
+	var osmbzh = 
+		'<p class="long">OpenStreetMap e brezhoneg</p>' +
+		'<p class="med">OSM e brezhoneg</p>' +
+		'<p class="short">OSM e brezhoneg</p>' +
+		'<p class="mini">OSM-bzh</p>'
 	var humanitarianName =
-		'<nobr>Y. Boniface</nobr> & <nobr>Humanitarian OpenStreetMap Team</nobr>'
-	var osmse = 'OpenStreetMap Sverige (Suède)'
+		'<p class="long"><nobr>Yohan Boniface</nobr> & <nobr>Humanitarian OpenStreetMap Team</nobr></p>' +
+		'<p class="med"><nobr>Y. Boniface</nobr> & <nobr>Humanitarian OpenStreetMap Team</nobr></p>' +
+		'<p class="short"><nobr>Y. Boniface</nobr> & HOT</p>' +
+		'<p class="mini"><nobr>Y.Bon.</nobr> & HOT</p>'
+	var osmse = 
+		'<p class="long">OpenStreetMap Sverige (Suède)</p>' +
+		'<p class="med">OpenStreetMap Sverige (Suède)</p>' +
+		'<p class="short">OSM Sverige (Suède)</p>' +
+		'<p class="mini">OSM Suède</p>'
 
 	var fixthemap = ' <nobr><a ' + fixLink + '>' + 
-		iconTool + 'améliorer' +
+		'<p class="long">' + iconTool + 'améliorer la carte</p>' +
+		'<p class="med">' + iconTool + 'améliorer</p>' +
+		'<p class="short">' + iconTool + '</p>' +
 		'</a></nobr> '
-	var join = '<a ' + joinLink + '>' + iconHand + '</a>'
-	var donate = '<a ' + donateLink + '>' + iconHeart + '</a>'
+	var join = '<a ' + joinLink + '>' +
+		'<p class="long">' + iconHand + '</p>' +
+		'<p class="med">' + iconHand + '</p>' +
+		'</a>'
+	var donate = '<a ' + donateLink + '>' +
+		'<p class="long">' + iconHeart + '</p>' +
+		'<p class="med">' + iconHeart + '</p>' +
+		'<p class="short">' + '' + '</p>' +
+		'<p class="mini">' + iconHeart + '</p>' +
+		'</a>'
 	
+	var separator = ' ⏩ '
 	// separation between data attribution and tiles attribution
-	var attribSep = '<br>'
+	var attribSep = 
+		'<br>' +
+		'<p class="short">' + separator + '</p>' +
+		'<p class="mini">' + separator + '</p>'
+	// separation between tiles attribution and leaflet attribution
+	var attribSep2 = 
+		'<p class="long"><br></p>' +
+		'<p class="med"><br></p>' +
+		'<p class="short">' + separator + '</p>' +
+		'<p class="mini">' + separator + '</p>'
 
 	var attributionLeaflet =
-		'<br> <nobr>' + '<a ' + leafletLink + '>' + iconRocket + '</a>' +
-		'<b>affichage</b> de cartes par <a ' + leafletLink + '><b>Leaflet</b></a>' +
+		' <nobr>' + attribSep2 + '<a ' + leafletLink + '>' + iconRocket + '</a>' +
+		'<p class="long"><b>affichage</b> de cartes par <a ' + leafletLink + '><b>Leaflet</b></a>, bibliothèque logicielle libre</p>' +
+		'<p class="med"><b>affichage</b> de cartes par <a ' + leafletLink + '><b>Leaflet</b></a></p>' +
+		'<p class="short"><a ' + leafletLink + '><b>Leaflet</b></a></p>' +
 		'</nobr> '
 	
 	var attributionOSMFR = tiles(osmfrLink, osmfrTiles) + ccbysa2
@@ -186,7 +243,7 @@
 				attribution: 
 					data(osmLink, copyrightOSM) + odbl + 
 					donate + join + fixthemap +
-					attribSep
+					attribSep,
 			},
 			variants: {
 				France: {
@@ -196,8 +253,8 @@
 						attribution: 
 							'{attribution.OpenStreetMap}' +
 							attributionOSMFR +
-							attributionLeaflet
-					}
+							attributionLeaflet,
+					},
 				},
 				humanitaire: {
 					url: 'https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png',
@@ -205,8 +262,8 @@
 						attribution:
 							'{attribution.OpenStreetMap}' +
 							attributionOSMHOT + hostingOSMFR +
-							attributionLeaflet
-					}
+							attributionLeaflet,
+					},
 				},
 				breton: {
 					url: 'https://tile.openstreetmap.bzh/br/{z}/{x}/{y}.png',
@@ -216,9 +273,31 @@
 							attributionOSMBZH + hostingOSMFR +
 							attributionLeaflet,
 						//bounds: [[46.2, -5.5], [50, 0.7]]
-					}
-				}
-			}
+					},
+				},
+/*
+				occitan: {
+					url: 'https://tile.openstreetmap.bzh/oc/{z}/{x}/{y}.png',
+					options: {
+						attribution:
+							'{attribution.OpenStreetMap}' +
+							attributionOSMBZH + hostingOSMFR +
+							attributionLeaflet,
+						//bounds: [[46.2, -5.5], [50, 0.7]]
+					},
+				},
+				basque: {
+					url: 'https://tile.openstreetmap.bzh/eu/{z}/{x}/{y}.png',
+					options: {
+						attribution:
+							'{attribution.OpenStreetMap}' +
+							attributionOSMBZH + hostingOSMFR +
+							attributionLeaflet,
+						//bounds: [[46.2, -5.5], [50, 0.7]]
+					},
+				},
+*/
+			},
 		},
 		Hydda: {
 			url: 'https://{s}.tile.openstreetmap.se/hydda/{variant}/{z}/{x}/{y}.png',
@@ -227,11 +306,11 @@
 				attribution: 
 					'{attribution.OpenStreetMap}' +
 					attributionOSMSE +
-					attributionLeaflet
+					attributionLeaflet,
 			},
 			variants: {
-				Full: 'full'
-			}
+				Full: 'full',
+			},
 		},
 		Stamen: {
 			url: 'https://stamen-tiles-{s}.a.ssl.fastly.net/{variant}/{z}/{x}/{y}.{ext}',
@@ -243,18 +322,19 @@
 				subdomains: 'abcd',
 				minZoom: 0,
 				maxZoom: 20,
-				variant: 'toner',
-				ext: 'png'
+				ext: 'png',
 			},
 			variants: {
+				// Toner: 'toner',
 				Watercolor: {
 					options: {
 						variant: 'watercolor',
 						minZoom: 1,
-						maxZoom: 16
-					}
-				}
-			}
+						maxZoom: 16,
+						ext: 'jpg',
+					},
+				},
+			},
 		},
 		Carto: {
 			url: 'https://cartodb-basemaps-{s}.global.ssl.fastly.net/{variant}/{z}/{x}/{y}.png',
@@ -265,7 +345,6 @@
 					attributionLeaflet,
 				subdomains: 'abcd',
 				maxZoom: 19,
-				variant: 'light_all'
 			},
 			variants: {
 				Positron: 'light_all',
