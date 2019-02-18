@@ -121,7 +121,7 @@
 		'<b>les contributeurs OpenStreetMap</b></a></nobr> '
 	var data = function (link, attribution) {
 		return ' <nobr><a ' + link + '>' + iconPackage + '</a>' +
-			'<b>données </b> ' + attribution + '</nobr> ';
+			'<b>données</b> ' + attribution + '</nobr> ';
 	};
 	var tiles = function (link, name) {
 		return ' <nobr><a ' + link + '>' + iconMap + '</a>' + 
@@ -156,7 +156,7 @@
 	var osmse = 'OpenStreetMap Sverige (Suède)'
 
 	var fixthemap = ' <nobr><a ' + fixLink + '>' + 
-		'<b>' + iconTool + 'améliorer' +
+		iconTool + 'améliorer' +
 		'</a></nobr> '
 	var join = '<a ' + joinLink + '>' + iconHand + '</a>'
 	var donate = '<a ' + donateLink + '>' + iconHeart + '</a>'
