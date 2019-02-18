@@ -123,9 +123,10 @@
 		'<p class="short">contributeurs</p>' +
 		' OpenStreetMap</b></a></nobr> '
 	var data = function (link, attribution) {
-		return ' <nobr><a ' + link + '>' + iconPackage + '</a>' +
-			'<p class="long"><b>données</b> par </p>' +
-			'<p class="med"><b>données</b> </p>' +
+		return ' <nobr>' + 
+			'<p class="long"><a ' + link + '>' + iconPackage + '</a><b>données</b> par </p>' +
+			'<p class="med"><a ' + link + '>' + iconPackage + '</a><b>données</b> </p>' +
+			'<p class="short"><a ' + link + '>' + iconPackage + '</a></p>' +
 			attribution + '</nobr> ';
 	};
 	var tiles = function (link, name) {
@@ -141,8 +142,10 @@
 			'<a ' + link + '><b>' + name + '</b></a></nobr> ';
 	};
 	var license = function (link, under, type, name) {
-		return ' <nobr><a ' + link + '>' + iconLabel + '</a>' + 
-			under + '<a ' + link + '>' + type + name + '</a></nobr> ';
+		return ' <nobr>' + under + '<a ' + link + '>' +
+			'<p class="short">' + iconLabel + '</p>' +
+			'<p class="mini">' + iconLabel + '</p>' +
+			type + name + '</a></nobr> ';
 	};
 
 	var licenceLibre = 
@@ -195,29 +198,20 @@
 		'<p class="med">' + iconTool + 'améliorer</p>' +
 		'<p class="short">' + iconTool + '</p>' +
 		'</a></nobr> '
-	var join = '<a ' + joinLink + '>' +
+	var joinOSMF = '<a ' + joinLink + '>' +
 		'<p class="long">' + iconHand + '</p>' +
-		'<p class="med">' + iconHand + '</p>' +
 		'</a>'
-	var donate = '<a ' + donateLink + '>' +
-		'<p class="long">' + iconHeart + '</p>' +
+	var donateOSMF = '<a ' + donateLink + '>' +
 		'<p class="med">' + iconHeart + '</p>' +
-		'<p class="short">' + '' + '</p>' +
 		'<p class="mini">' + iconHeart + '</p>' +
 		'</a>'
 	
-	var separator = ' ⏩ '
 	// separation between data attribution and tiles attribution
-	var attribSep = 
-		'<br>' +
-		'<p class="short">' + separator + '</p>' +
-		'<p class="mini">' + separator + '</p>'
+	var attribSep = '<br>'
 	// separation between tiles attribution and leaflet attribution
 	var attribSep2 = 
 		'<p class="long"><br></p>' +
-		'<p class="med"><br></p>' +
-		'<p class="short">' + separator + '</p>' +
-		'<p class="mini">' + separator + '</p>'
+		'<p class="med"><br></p>'
 
 	var attributionLeaflet =
 		' <nobr>' + attribSep2 + '<a ' + leafletLink + '>' + iconRocket + '</a>' +
@@ -242,7 +236,7 @@
 				maxZoom: 19,
 				attribution: 
 					data(osmLink, copyrightOSM) + odbl + 
-					donate + join + fixthemap +
+					fixthemap + donateOSMF + joinOSMF + 
 					attribSep,
 			},
 			variants: {
