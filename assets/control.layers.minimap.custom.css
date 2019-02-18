@@ -6,6 +6,7 @@
     width: 100%;
 }
 .leaflet-control-layers-expanded.leaflet-control-layers-minimap {
+    display: block;
     width: 30%;
     min-width: 180px;
     max-width: 440px;
