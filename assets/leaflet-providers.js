@@ -209,9 +209,7 @@
 	// separation between data attribution and tiles attribution
 	var attribSep = '<br>'
 	// separation between tiles attribution and leaflet attribution
-	var attribSep2 = 
-		'<p class="long"><br></p>' +
-		'<p class="med"><br></p>'
+	var attribSep2 = ''
 
 	var attributionLeaflet =
 		' <nobr>' + attribSep2 + '<a ' + leafletLink + '>' + iconRocket + '</a>' +
