@@ -93,7 +93,7 @@
 	var iconHouse = ' 🏠 '
 	var iconRocket = ' 🚀 '
 	var iconCopyright = ' ©️ '
-	var iconLabel = ' 🏷️ '
+	var iconScroll = ' 📜 '
 	var iconTool = ' 🔧 '
 	var iconHand = ' 🖐️ '
 	var iconHeart = ' ❤️ '
@@ -143,8 +143,8 @@
 	};
 	var license = function (link, under, type, name) {
 		return ' <nobr>' + under + '<a ' + link + '>' +
-			'<p class="short">' + iconLabel + '</p>' +
-			'<p class="mini">' + iconLabel + '</p>' +
+			'<p class="short">' + iconScroll + '</p>' +
+			'<p class="mini">' + iconScroll + '</p>' +
 			type + name + '</a></nobr> ';
 	};
 
