@@ -6,6 +6,7 @@
     width: 100%;
 }
 .leaflet-control-layers-expanded.leaflet-control-layers-minimap {
+    display: block;
     width: 30%;
     min-width: 180px;
     max-width: 440px;
@@ -37,4 +38,29 @@
   .leaflet-control-layers-expanded.leaflet-control-layers-minimap {
     display: none;
   }
+}
+p.long {display: inline;}
+p.med {display: none;}
+p.short {display: none;}
+p.mini {display: none;}
+@media only screen and (max-width: 650px) {
+  /* For small screens: */
+  p.long {display: none;}
+  p.med {display: inline;}
+  p.short {display: none;}
+  p.mini {display: none;}
+}
+@media only screen and (max-width: 450px) {
+  /* For very small screens: */
+  p.long {display: none;}
+  p.med {display: none;}
+  p.short {display: inline;}
+  p.mini {display: none;}
+}
+@media only screen and (max-width: 300px) {
+  /* For very small screens: */
+  p.long {display: none;}
+  p.med {display: none;}
+  p.short {display: none;}
+  p.mini {display: inline;}
 }
