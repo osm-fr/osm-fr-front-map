@@ -115,6 +115,7 @@
 	var osmseLink = 'href="https://openstreetmap.se/om" title="OpenStreetMap Sverige (Suède)" target="_blank"'
 	var stamenLink = 'href="https://maps.stamen.com/" title="Stamen Design" target="_blank"'
 	var cartodbLink = 'href="https://carto.com/legal/" title="Carto" target="_blank"'
+	var cyclosmLink = 'href="https://www.cyclosm.org" title="CyclOSM" target="_blank"'
 	
 	var copyrightOSM = 
 		' <nobr><a ' + copyLink + '>' + iconCopyright + '<b>' + 
@@ -192,6 +193,11 @@
 		'<p class="med">OpenStreetMap Sverige (Suède)</p>' +
 		'<p class="short">OSM Sverige (Suède)</p>' +
 		'<p class="mini">OSM Suède</p>'
+    var cyclosmName =
+		'<p class="long">Les contributeurs CyclOSM</p>' +
+		'<p class="med">Contributeurs CyclOSM</p>' +
+		'<p class="short">Contributeurs CyclOSM</p>' +
+		'<p class="mini">CyclOSM</p>'
 
 	var fixthemap = ' <nobr><a ' + fixLink + '>' + 
 		'<p class="long">' + iconTool + 'améliorer la carte</p>' +
@@ -224,6 +230,7 @@
 	var attributionOSMSE = tiles(osmseLink, osmse) + ccbysa2
 	var attributionStamen = tiles(stamenLink, 'Stamen Design') + ccby3
 	var attributionCarto = tiles(cartodbLink, 'Carto') + license(cartodbLink, '', nonCommercial, '')
+	var attributionCyclosm = tiles(cyclosmLink, cyclosmName)
 
 	var hostingOSMFR = hosting(osmfrLink, osmfrHosting)
 
@@ -265,6 +272,15 @@
 							attributionOSMBZH + hostingOSMFR +
 							attributionLeaflet,
 						//bounds: [[46.2, -5.5], [50, 0.7]]
+					},
+				},
+				CyclOSM: {
+					url: 'https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png',
+					options: {
+						attribution:
+							'{attribution.OpenStreetMap}' +
+							attributionCyclosm + hostingOSMFR +
+							attributionLeaflet,
 					},
 				},
 /*
