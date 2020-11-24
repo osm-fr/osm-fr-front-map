@@ -193,10 +193,10 @@
 		'<p class="med">OpenStreetMap Sverige (Suède)</p>' +
 		'<p class="short">OSM Sverige (Suède)</p>' +
 		'<p class="mini">OSM Suède</p>'
-    var cyclosmName =
-		'<p class="long">Les contributeurs CyclOSM</p>' +
-		'<p class="med">Contributeurs CyclOSM</p>' +
-		'<p class="short">Contributeurs CyclOSM</p>' +
+ 	var cyclosmName =
+		'<p class="long">les contributeurs CyclOSM</p>' +
+		'<p class="med">contributeurs CyclOSM</p>' +
+		'<p class="short">contributeurs CyclOSM</p>' +
 		'<p class="mini">CyclOSM</p>'
 
 	var fixthemap = ' <nobr><a ' + fixLink + '>' + 
@@ -230,7 +230,7 @@
 	var attributionOSMSE = tiles(osmseLink, osmse) + ccbysa2
 	var attributionStamen = tiles(stamenLink, 'Stamen Design') + ccby3
 	var attributionCarto = tiles(cartodbLink, 'Carto') + license(cartodbLink, '', nonCommercial, '')
-	var attributionCyclosm = tiles(cyclosmLink, cyclosmName)
+	var attributionCyclosm = tiles(cyclosmLink, cyclosmName) + ccbysa2
 
 	var hostingOSMFR = hosting(osmfrLink, osmfrHosting)
 
