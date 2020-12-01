@@ -187,7 +187,7 @@
 		'<p class="med"><nobr>Y. Boniface</nobr> & <nobr>Humanitarian OpenStreetMap Team</nobr></p>' +
 		'<p class="short"><nobr>Y. Boniface</nobr> & HOT</p>' +
 		'<p class="mini"><nobr>Y.Bon.</nobr> & HOT</p>'
- 	var cyclosmName =
+	var cyclosmName =
 		'<p class="long">les contributeurs CyclOSM</p>' +
 		'<p class="med">contributeurs CyclOSM</p>' +
 		'<p class="short">contributeurs CyclOSM</p>' +
