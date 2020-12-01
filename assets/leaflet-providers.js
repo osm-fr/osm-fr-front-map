@@ -188,9 +188,9 @@
 		'<p class="short"><nobr>Y. Boniface</nobr> & HOT</p>' +
 		'<p class="mini"><nobr>Y.Bon.</nobr> & HOT</p>'
 	var cyclosmName =
-		'<p class="long">les contributeurs CyclOSM</p>' +
-		'<p class="med">contributeurs CyclOSM</p>' +
-		'<p class="short">contributeurs CyclOSM</p>' +
+		'<p class="long">Les contributeurs CyclOSM</p>' +
+		'<p class="med">Contributeurs CyclOSM</p>' +
+		'<p class="short">Contributeurs CyclOSM</p>' +
 		'<p class="mini">CyclOSM</p>'
 
 	var fixthemap = ' <nobr><a ' + fixLink + '>' + 
