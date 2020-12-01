@@ -223,7 +223,7 @@
 	var attributionOSMHOT = tiles(humanitarianLink, humanitarianName) + cc0
 	var attributionStamen = tiles(stamenLink, 'Stamen Design') + ccby3
 	var attributionCarto = tiles(cartodbLink, 'Carto') + license(cartodbLink, '', nonCommercial, '')
-	var attributionCyclosm = tiles(cyclosmLink, cyclosmName)
+	var attributionCyclosm = tiles(cyclosmLink, cyclosmName) + ccbysa2
 
 	var hostingOSMFR = hosting(osmfrLink, osmfrHosting)
 
