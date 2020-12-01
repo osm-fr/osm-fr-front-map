@@ -112,7 +112,6 @@
 	var osmfrLink = 'href="https://www.openstreetmap.fr/mentions-legales/"" title="OpenStreetMap France - mentions légales" target="_blank"'
 	var humanitarianLink = 'href="https://www.hotosm.org/updates/2013-09-29_a_new_window_on_openstreetmap_data" title="Couche humanitaire par Yohan Boniface et HOT" target="_blank"'
 	var bzhLink = 'href="http://www.openstreetmap.bzh/" title="OpenStreetMap en breton" target="_blank"'
-	var osmseLink = 'href="https://openstreetmap.se/om" title="OpenStreetMap Sverige (Suède)" target="_blank"'
 	var stamenLink = 'href="https://maps.stamen.com/" title="Stamen Design" target="_blank"'
 	var cartodbLink = 'href="https://carto.com/legal/" title="Carto" target="_blank"'
 	var cyclosmLink = 'href="https://www.cyclosm.org" title="CyclOSM" target="_blank"'
@@ -188,11 +187,6 @@
 		'<p class="med"><nobr>Y. Boniface</nobr> & <nobr>Humanitarian OpenStreetMap Team</nobr></p>' +
 		'<p class="short"><nobr>Y. Boniface</nobr> & HOT</p>' +
 		'<p class="mini"><nobr>Y.Bon.</nobr> & HOT</p>'
-	var osmse = 
-		'<p class="long">OpenStreetMap Sverige (Suède)</p>' +
-		'<p class="med">OpenStreetMap Sverige (Suède)</p>' +
-		'<p class="short">OSM Sverige (Suède)</p>' +
-		'<p class="mini">OSM Suède</p>'
  	var cyclosmName =
 		'<p class="long">les contributeurs CyclOSM</p>' +
 		'<p class="med">contributeurs CyclOSM</p>' +
@@ -227,7 +221,6 @@
 	var attributionOSMFR = tiles(osmfrLink, osmfrTiles) + ccbysa2
 	var attributionOSMBZH = tiles(bzhLink, osmbzh) + ccbysa2
 	var attributionOSMHOT = tiles(humanitarianLink, humanitarianName) + cc0
-	var attributionOSMSE = tiles(osmseLink, osmse) + ccbysa2
 	var attributionStamen = tiles(stamenLink, 'Stamen Design') + ccby3
 	var attributionCarto = tiles(cartodbLink, 'Carto') + license(cartodbLink, '', nonCommercial, '')
 	var attributionCyclosm = tiles(cyclosmLink, cyclosmName) + ccbysa2
@@ -305,19 +298,6 @@
 					},
 				},
 */
-			},
-		},
-		Hydda: {
-			url: 'https://{s}.tile.openstreetmap.se/hydda/{variant}/{z}/{x}/{y}.png',
-			options: {
-				maxZoom: 18,
-				attribution: 
-					'{attribution.OpenStreetMap}' +
-					attributionOSMSE +
-					attributionLeaflet,
-			},
-			variants: {
-				Full: 'full',
 			},
 		},
 		Stamen: {
