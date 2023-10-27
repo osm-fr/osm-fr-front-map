@@ -4,7 +4,7 @@
 	var map = L.map('map', {
 		zoomControl: false,
 		attributionControl: false,
-	}).setView([48, -3], 4);
+	}).setView([46.7, 0], 6);
 
 	L.control.attribution({prefix: ''}).addTo(map);
 
