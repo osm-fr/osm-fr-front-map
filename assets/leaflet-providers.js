@@ -276,7 +276,6 @@
 						//bounds: [[46.2, -5.5], [50, 0.7]]
 					},
 				},
-/*
 				occitan: {
 					url: 'https://tile.openstreetmap.bzh/oc/{z}/{x}/{y}.png',
 					options: {
@@ -297,10 +296,9 @@
 						//bounds: [[46.2, -5.5], [50, 0.7]]
 					},
 				},
-*/
 			},
 		},
-		Stamen: {
+		/*Stamen: {
 			url: 'https://stamen-tiles-{s}.a.ssl.fastly.net/{variant}/{z}/{x}/{y}.{ext}',
 			options: {
 				attribution:
@@ -323,7 +321,7 @@
 					},
 				},
 			},
-		},
+		},*/
 		Carto: {
 			url: 'https://cartodb-basemaps-{s}.global.ssl.fastly.net/{variant}/{z}/{x}/{y}.png',
 			options: {
