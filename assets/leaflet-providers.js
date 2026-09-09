@@ -85,7 +85,7 @@
 
 	/**
 	 * Definition of providers.
-	 * see http://leafletjs.com/reference.html#tilelayer for options in the options map.
+	 * see https://leafletjs.com/reference.html#tilelayer for options in the options map.
 	 */
 	
 	var iconPackage = ' 📦 '
@@ -102,16 +102,16 @@
 	var osmLink = 'href="https://www.openstreetmap.org" title="données par &copy les contributeurs & contributrices OpenStreetMap" target="_blank"'
 	var copyLink = 'href="https://www.openstreetmap.org/copyright" title="Droits d’auteur et licence OpenStreetMap" target="_blank"'
 	var fixLink = 'href="https://www.openstreetmap.org/fixthemap" title="Améliorer la cartographie OpenStreetMap" target="_blank"'
-	var joinLink = 'href="https://join.osmfoundation.org/" title="Adhérer à la fondation OpenStreetMap" target="_blank"'
-	var donateLink = 'href="https://donate.openstreetmap.org/" title="Faire un don" target="_blank"'
+	var joinLink = 'href="https://supporting.openstreetmap.org/" title="Adhérer à la fondation OpenStreetMap" target="_blank"'
+	var donateLink = 'href="https://supporting.openstreetmap.org/" title="Faire un don" target="_blank"'
 	var odblLink = 'href="https://opendatacommons.org/licenses/odbl/1.0/" title="Open Database License (ODbL) v1.0" target="_blank"'
 	var ccbysa2Link = 'href="https://creativecommons.org/licenses/by-sa/2.0/deed.fr" title="Licence Creative Commons - Attribution - Partage dans les Mêmes Conditions 2.0" target="_blank"'
 	var ccby3Link = 'href="https://creativecommons.org/licenses/by/3.0/deed.fr" title="Licence Creative Commons - Attribution 3.0" target="_blank"'
 	var ccby4Link = 'href="https://creativecommons.org/licenses/by/4.0/deed.fr" title="Licence Creative Commons - Attribution 4.0 International" target="_blank"'
 	var cc0Link = 'href="https://creativecommons.org/publicdomain/zero/1.0/deed.fr" title="Licence CC0 1.0 universel - Transfert dans le Domaine Public" target="_blank"'
 	var osmfrLink = 'href="https://www.openstreetmap.fr/mentions-legales/"" title="OpenStreetMap France - mentions légales" target="_blank"'
-	var humanitarianLink = 'href="https://www.hotosm.org/updates/2013-09-29_a_new_window_on_openstreetmap_data" title="Couche humanitaire par Yohan Boniface et HOT" target="_blank"'
-	var bzhLink = 'href="http://www.openstreetmap.bzh/" title="OpenStreetMap en breton" target="_blank"'
+	var humanitarianLink = 'href="https://wiki.openstreetmap.org/wiki/HOT_style" title="Couche humanitaire par Yohan Boniface et HOT" target="_blank"'
+	var bzhLink = 'href="https://www.openstreetmap.bzh/" title="OpenStreetMap en breton" target="_blank"'
 	var stamenLink = 'href="https://maps.stamen.com/" title="Stamen Design" target="_blank"'
 	var cartodbLink = 'href="https://carto.com/legal/" title="Carto" target="_blank"'
 	var cyclosmLink = 'href="https://www.cyclosm.org" title="CyclOSM" target="_blank"'
