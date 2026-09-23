@@ -113,7 +113,6 @@
 	var humanitarianLink = 'href="https://www.hotosm.org/updates/2013-09-29_a_new_window_on_openstreetmap_data" title="Couche humanitaire par Yohan Boniface et HOT" target="_blank"'
 	var bzhLink = 'href="http://www.openstreetmap.bzh/" title="OpenStreetMap en breton" target="_blank"'
 	var stamenLink = 'href="https://maps.stamen.com/" title="Stamen Design" target="_blank"'
-	var cartodbLink = 'href="https://carto.com/legal/" title="Carto" target="_blank"'
 	var cyclosmLink = 'href="https://www.cyclosm.org" title="CyclOSM" target="_blank"'
 	
 	var copyrightOSM = 
@@ -222,7 +221,6 @@
 	var attributionOSMBZH = tiles(bzhLink, osmbzh) + ccbysa2
 	var attributionOSMHOT = tiles(humanitarianLink, humanitarianName) + cc0
 	var attributionStamen = tiles(stamenLink, 'Stamen Design') + ccby3
-	var attributionCarto = tiles(cartodbLink, 'Carto') + license(cartodbLink, '', nonCommercial, '')
 	var attributionCyclosm = tiles(cyclosmLink, cyclosmName)
 
 	var hostingOSMFR = hosting(osmfrLink, osmfrHosting)
@@ -322,21 +320,6 @@
 				},
 			},
 		},*/
-		Carto: {
-			url: 'https://cartodb-basemaps-{s}.global.ssl.fastly.net/{variant}/{z}/{x}/{y}.png',
-			options: {
-				attribution: 
-					'{attribution.OpenStreetMap}' +
-					attributionCarto +
-					attributionLeaflet,
-				subdomains: 'abcd',
-				maxZoom: 19,
-			},
-			variants: {
-				Positron: 'light_all',
-				DarkMatter: 'dark_all'
-			}
-		}
 	};
 
 	L.tileLayer.provider = function (provider, options) {
